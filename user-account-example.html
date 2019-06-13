@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>IT Helpdesk Ticketing System</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/main.css">
+        <!-- FontAwesowe @ local CSS folder -->
+        <link rel="stylesheet" href="css/font-awesome-all.css">
+    </head>
+    <body>
+        <header id="fake-header"></header>
+        <header>
+            <div id="header-title">
+                <h3>IT Helpdesk Ticketing System</h3>
+            </div>
+            <div id="header-nav">
+                <a href="manage-users.html">Back <i class="fas fa-undo-alt fa-lg"></i></a> |
+                <a href="home-a.html"><i class="fas fa-home fa-lg"></i></a> | 
+                <i class="fas fa-user fa-lg"></i> <p>Firstname Lastname</p> | 
+                <a href="login.html"><i class="fas fa-power-off fa-lg"></i> Logout</a>
+            </div>
+        </header>
+        <div id="main-wrapper">
+        
+            <div id="content-wrapper">
+
+                <h3>User Account details</h3>
+                <hr>
+
+                <table>
+                    <tr>
+                        <td>First Name:</td>
+                        <td><input id="add-new-user-first-name" class="input-add-new" value="Ted"></td>
+                    </tr>
+                    <tr>
+                        <td>Last Name:</td>
+                        <td><input id="add-new-user-last-name" class="input-add-new" value="Testovny"></td>
+                    </tr>
+                    <tr>
+                        <td>E-mail:</td>
+                        <td><input id="add-new-user-email" class="input-add-new" value="ted.testovny@test.com"></td>
+                    </tr>
+                    <tr>
+                        <td class="highlight">Password:</td>
+                        <td><button id="btn-user-account-reset-password" class="btn btn-add">Reset password</button></td>
+                    </tr>
+                    <tr>
+                        <td>Job role:</td>
+                        <td><input id="add-new-user-job-role" class="input-add-new" value="Tester"></td>
+                    </tr>
+                    <tr>
+                        <td>Department:</td>
+                        <td><input id="add-new-user-department" class="input-add-new" value="Quality"></td>
+                    </tr>
+                    <tr>
+                        <td>Location:</td>
+                        <td><input id="add-new-user-location" class="input-add-new" value="U1F1"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><button id="btn-user-account-update" class="btn btn-add">Save</button></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><button id="btn-user-account-cancel" class="btn btn-add">Cancel</button></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><hr>User Account wipe-out <span class="highlight">[warning: irreversible action]</span></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><button id="btn-user-account-delete" class="btn btn-add">Delete</button></td>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+        <footer>
+            <hr>
+            &copy; DoverFS - Dundee IT - 2018
+        </footer>
+        <script src="js/main-a.js"></script>
+        <script src="js/new-add.js"></script>
+    </body>
+</html>

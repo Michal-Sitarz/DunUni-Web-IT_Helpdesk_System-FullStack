@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>IT Helpdesk Ticketing System</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/main.css">
+        <!-- FontAwesowe @ local CSS folder -->
+        <link rel="stylesheet" href="css/font-awesome-all.css">
+    </head>
+    <body>
+        <header id="fake-header"></header>
+        <header>
+            <div id="header-title">
+                <h3>IT Helpdesk Ticketing System</h3>
+            </div>
+            <div id="header-nav">
+                <a href="home-a.html">Back <i class="fas fa-undo-alt fa-lg"></i></a> |
+                <a href="home-a.html"><i class="fas fa-home fa-lg"></i></a> | 
+                <i class="fas fa-user fa-lg"></i> <p>Firstname Lastname</p> | 
+                <a href="login.html"><i class="fas fa-power-off fa-lg"></i> Logout</a>
+            </div>
+        </header>
+        <div id="main-wrapper">
+       
+            <nav>
+                <div id="search-bars">
+                    <div>
+                        <input id="search-bar-device" type="text">
+                        <button class="btn-search">
+                            <i class="fas fa-search fa-lg"></i>
+                        </button>
+                    </div>
+                </div>
+                <button class="btn-mainpage" id="btn-add-new-device">[+] Add New Device</button>    
+            </nav>
+            <hr>
+
+            <div id="content-wrapper">
+
+                <h3>List of all devices</h3>
+                <div id="tbl-tickets-list">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Hostname</th>
+                                <th>Type</th>
+                                <th>Owner (User)</th>
+                                <th>...</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>DUNFD0001</td>
+                                <td>Desktop PC</td>
+                                <td>Ted Testovny</td>
+                                <td><a href="device-example.html">More</a></td>
+                            </tr>
+                            <tr>
+                                <td>DUNFD0007</td>
+                                <td>Desktop PC</td>
+                                <td>Ted Testovny</td>
+                                <td><a href="device-example.html">More</a></td>
+                            </tr>
+                            <tr>
+                                <td>DUNFL0002</td>
+                                <td>Laptop</td>
+                                <td>Ted Testovny</td>
+                                <td><a href="device-example.html">More</a></td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+        <footer>
+            <hr>
+            &copy; DoverFS - Dundee IT - 2018
+        </footer>
+        <script src="js/main-a.js"></script>
+        <script src="js/search-bars.js"></script>
+    </body>
+</html>

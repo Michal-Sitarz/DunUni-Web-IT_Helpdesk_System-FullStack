@@ -1,0 +1,321 @@
+/* RESPONSIVE DESIGN for small and large displays */
+
+@media (min-width: 668px) {
+    #main-wrapper{
+    }
+}
+
+@media (min-width: 1441px) {
+    
+    #main-wrapper, header{
+        width:1000px; 
+        margin: 0 auto;
+    }
+
+}
+
+
+/* GLOBAL containers */
+html, body {
+    height: 100%;
+}
+
+body{
+    margin: 0;
+    width: 100%;
+    font-family: Tahoma, sans-serif;
+} 
+
+header {
+    height: 3rem;
+    background-color: #2F5496; /*navy*/
+    color: white;
+    display: flex;
+    align-items: center;
+}
+#fake-header{
+    height: 3rem;
+    width: 100%;
+    background-color: #2F5496; /*navy*/
+    position: absolute;
+    top: 0; left: 0;
+    z-index: -1;
+}
+    header h3 {
+        color: white;
+    }
+
+    #header-title{
+        width: 50%;
+        padding-left: 1rem;
+    }
+    #header-nav{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        
+        
+        width: 50%;
+        padding-right: 1rem;
+
+    }
+
+        #header-nav > *{
+            margin-left: .25rem;
+            margin-right: .25rem;
+        }
+        #header-nav a {
+            color: white;
+        }
+        
+        #header-nav i {
+            color: #00B0F0; /*deepskyblue*/
+        }
+    
+    
+footer {
+    text-align: center;
+    font-size: 80%;
+
+    padding-bottom: .5rem;
+
+    position: fixed;
+    bottom: 0;
+    width: inherit;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+/* GLOBAL elements */
+hr{
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border-style: solid;
+    border-color: lightblue;
+}
+    #content-wrapper hr{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+button{
+    font-family: Tahoma;
+    font-size: 100%;
+    width: 100px;
+    height:2em;
+    margin: 1rem;
+}
+
+input{
+    font-family: Tahoma;
+    font-size: 100%;
+    padding-left: 5px;
+    width: 250px;
+    height:2em;
+}
+
+a:link, a:visited{
+    text-decoration: none;
+    color: #2F5496; /*navy*/    
+}
+a:hover{
+    text-decoration: underline;    
+}
+
+table{
+    margin: auto;
+}
+
+h3 {
+    color: #2F5496; /*navy*/
+}
+    #ticket h3{
+        color: navy;
+    }
+
+
+/* WRAPPERS & CONTAINERS */
+
+#search-bars{
+    margin: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+#content-wrapper{
+    margin: 1rem;
+}
+
+
+#login-container{
+    width: 300px;
+    height: 300px;
+    border: 1px solid #2F5496; /*lightblue*/;
+    padding: 10px;
+}
+    #login-container hr{
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+
+#notifications-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+    #notifications-header h3{
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+
+
+/* CLASSES */
+
+.center-container{
+    margin: 0 auto;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+}
+
+.highlight{
+    color: orangered;
+}
+
+.btn{
+    color: white;
+    background-color: #798093; /*grey*/
+}
+
+.btn-add{
+    margin: .5rem 1.5rem .5rem 1.5rem;
+}
+
+.btn-mainpage{
+    width: 240px;
+    height: 60px;
+    font-size: 125%;
+    color: white;
+    background-color: grey;
+}
+
+.btn-search{
+    width: 2rem;
+    height: 2rem;
+    margin: 0;
+    padding: 0;
+    background-color: grey;
+    color: white;
+}
+
+.input-add-new:disabled{
+    border: solid 1px grey;
+    background-color: #f2f2f2; /*lightgrey*/;
+}
+
+
+/* specific elements */
+
+#input-username, #input-password {
+    text-align: left;
+}
+#login-container i {
+    color: #2F5496; /*navy*/
+}
+
+/* buttons colours */
+#btn-login{
+    background-color: #798093; /*grey*/
+}
+#btn-create-account-submit{
+    background-color: #0070C0; /*darkslateblue*/
+}
+#btn-create-account-cancel{
+    margin-top: 0;
+}
+
+
+#btn-helpdesk-guide{
+    background-color: #31B8F2; /*cornflowerblue*/
+}
+#btn-analytics{
+    background-color: #F59D56; /*coral*/
+}
+#btn-manage-devices,#btn-manage-users{
+    background-color: #0070C0; /*darkslateblue*/
+}
+#btn-add-new-device,#btn-add-new-user{
+    background-color: #0070C0; /*hotpink*/
+}
+#btn-report-incident{
+    background-color: #C05046; /*firebrick*/
+}
+#btn-new-request{
+    background-color: #9DA558; /*forestgreen*/
+}
+#btn-tickets-history{
+    background-color: #9DA5B5; /*teal*/
+}
+
+#btn-notifications-close{
+    width: min-content;
+    height: auto;
+    margin: 0;
+}
+    #btn-notifications-close i{
+        color: #C05046; /*firebrick*/
+    }
+    
+#btn-user-account-update{
+    background-color: #31B8F2; /*cornflowerblue*/
+}
+#btn-user-account-reset-password{
+    background-color: #C05046; /*firebrick*/
+    width: auto;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-left: 0;
+}
+#btn-user-account-delete{
+    background-color: #C05046; /*firebrick*/
+}
+
+#btn-device-save, #btn-device-cancel{
+    margin: 0;
+}
+#btn-device-save{
+    background-color: #0070C0; /*darkslateblue*/
+}
+#btn-device-remove{
+    background-color: #C05046; /*firebrick*/
+}
+
+    
+/* tickets list table */
+
+#tbl-tickets-list table{
+    border-spacing: .5rem;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#tbl-tickets-list td, th{
+    border: 1px solid #00B0F0; /*lightblue*/;
+    padding: 0.5rem;
+}
+
+#tbl-tickets-list th {
+    background-color: #2F5496; /*navy*/
+    color: white;
+}
+
