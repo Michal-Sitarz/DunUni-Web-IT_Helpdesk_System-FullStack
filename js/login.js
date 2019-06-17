@@ -86,11 +86,11 @@ function login(){
       
     // user type deduction
     if(username.substr(0,2)=="a-"){
-        window.location = "html/home-a.html";
+        window.location = "home-a.html";
     }
     else
     {
-        window.location = "html/home.html";
+        window.location = "home.html";
     }
     
 }

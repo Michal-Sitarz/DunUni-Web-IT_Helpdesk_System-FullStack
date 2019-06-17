@@ -104,13 +104,13 @@ function cancelTicket(){
     //for prototype version only
     if(currentFileName == "ticket-example.html")
     {
-        window.location = "html/home.html";
+        window.location = "home.html";
     }
     else if(currentFileName == "ticket-example-a.html"){
-        window.location = "html/home-a.html";
+        window.location = "home-a.html";
     }
     else{
-        window.location = "html/home.html";
+        window.location = "home.html";
     }
 }
 
