@@ -28,7 +28,7 @@
         </tr>
 
         <tr>
-            <td><hr><a href="login-create-account.html">Create account</a></td>
+            <td><hr><a href="login-create-account.php">Create account</a></td>
         </tr>
     </table>
 </div>

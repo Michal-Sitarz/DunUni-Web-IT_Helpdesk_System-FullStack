@@ -2,7 +2,7 @@
     include 'common/header.php';
 ?>
 
-<a href="home-a.html">
+<a href="home-a.php">
     
 <?php
     include 'common/header-nav.php';

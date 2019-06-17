@@ -41,19 +41,19 @@
                         <td>DUNFD0001</td>
                         <td>Desktop PC</td>
                         <td>Ted Testovny</td>
-                        <td><a href="device-example.html">More</a></td>
+                        <td><a href="device-example.php">More</a></td>
                     </tr>
                     <tr>
                         <td>DUNFD0007</td>
                         <td>Desktop PC</td>
                         <td>Ted Testovny</td>
-                        <td><a href="device-example.html">More</a></td>
+                        <td><a href="device-example.php">More</a></td>
                     </tr>
                     <tr>
                         <td>DUNFL0002</td>
                         <td>Laptop</td>
                         <td>Ted Testovny</td>
-                        <td><a href="device-example.html">More</a></td>
+                        <td><a href="device-example.php">More</a></td>
                     </tr>
 
                 </tbody>

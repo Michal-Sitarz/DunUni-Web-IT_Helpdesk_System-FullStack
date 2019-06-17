@@ -43,21 +43,21 @@
                         <td>ted.testovny@test.com</td>
                         <td>IT</td>
                         <td>U1F1</td>
-                        <td><a href="user-account-example.html">More</a></td>
+                        <td><a href="user-account-example.php">More</a></td>
                     </tr>
                     <tr>
                         <td>Ted Testovny</td>
                         <td>ted.testovny@test.com</td>
                         <td>Engineering</td>
                         <td>U1F2</td>
-                        <td><a href="user-account-example.html">More</a></td>
+                        <td><a href="user-account-example.php">More</a></td>
                     </tr>
                     <tr>
                         <td>Ted Testovny</td>
                         <td>ted.testovny@test.com</td>
                         <td>Finance</td>
                         <td>U3F1</td>
-                        <td><a href="user-account-example.html">More</a></td>
+                        <td><a href="user-account-example.php">More</a></td>
                     </tr>
                 </tbody>
             </table>

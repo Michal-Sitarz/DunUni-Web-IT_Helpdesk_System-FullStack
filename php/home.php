@@ -46,14 +46,14 @@
                         <td>Ticket Topic here</td>
                         <td>19/09/2019</td>
                         <td>normal</td>
-                        <td><a href="ticket-example.html">Details</a></td>
+                        <td><a href="ticket-example.php">Details</a></td>
                     </tr>
                     <tr>
                         <td>DND0001111013</td>
                         <td>Ticket Topic here</td>
                         <td>19/09/2019</td>
                         <td>normal</td>
-                        <td><a href="ticket-example.html">Details</a></td>
+                        <td><a href="ticket-example.php">Details</a></td>
                     </tr>
                 </tbody>
             </table>

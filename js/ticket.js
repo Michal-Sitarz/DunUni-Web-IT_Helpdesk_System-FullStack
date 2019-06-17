@@ -55,13 +55,13 @@ function submitTicket(){
         //for prototype version only
         if(currentFileName == "ticket-example.php")
         {
-            window.location = "html/home.php";
+            window.location = "home.php";
         }
         else if(currentFileName == "ticket-example-a.php"){
-            window.location = "html/home-a.php";
+            window.location = "home-a.php";
         }
         else{
-            window.location = "html/home.php";
+            window.location = "home.php";
         }
     }
 }

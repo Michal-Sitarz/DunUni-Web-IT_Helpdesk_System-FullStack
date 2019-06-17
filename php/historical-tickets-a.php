@@ -28,29 +28,29 @@
                         <td>DND0001111013</td>
                         <td>Ticket Summary here</td>
                         <td>19/09/2019</td>
-                        <td><a href="ticket-example-a.html">Details</a></td>
-                        <td><a href="ticket-example-a.html">Reopen</a></td>
+                        <td><a href="ticket-example-a.php">Details</a></td>
+                        <td><a href="ticket-example-a.php">Reopen</a></td>
                     </tr>
                     <tr>
                         <td>DND0001111013</td>
                         <td>Ticket Summary here</td>
                         <td>19/09/2019</td>
-                        <td><a href="ticket-example-a.html">Details</a></td>
-                        <td><a href="ticket-example-a.html">Reopen</a></td>
+                        <td><a href="ticket-example-a.php">Details</a></td>
+                        <td><a href="ticket-example-a.php">Reopen</a></td>
                     </tr>
                     <tr>
                         <td>DND0001111013</td>
                         <td>Ticket Summary here</td>
                         <td>19/09/2019</td>
-                        <td><a href="ticket-example-a.html">Details</a></td>
-                        <td><a href="ticket-example-a.html">Reopen</a></td>
+                        <td><a href="ticket-example-a.php">Details</a></td>
+                        <td><a href="ticket-example-a.php">Reopen</a></td>
                     </tr>
                     <tr>
                         <td>DND0001111013</td>
                         <td>Ticket Summary here</td>
                         <td>19/09/2019</td>
-                        <td><a href="ticket-example-a.html">Details</a></td>
-                        <td><a href="ticket-example-a.html">Reopen</a></td>
+                        <td><a href="ticket-example-a.php">Details</a></td>
+                        <td><a href="ticket-example-a.php">Reopen</a></td>
                     </tr>
                 </tbody>
             </table>
