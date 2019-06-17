@@ -28,31 +28,31 @@ if(document.getElementById("btn-notifications-close") != null){
 
 // load page functions
 function loadPage_HelpdeskGuide(){
-    window.location = "helpdesk-guide-a.html";
+    window.location = "html/helpdesk-guide-a.html";
 }
 
 function loadPage_Analytics(){
-    window.location = "analytics.html";
+    window.location = "html/analytics.html";
 }
 
 function loadPage_TicketsHistory(){
-    window.location = "historical-tickets-a.html";
+    window.location = "html/historical-tickets-a.html";
 }
 
 function loadPage_ManageUsers(){
-    window.location = "manage-users.html";
+    window.location = "html/manage-users.html";
 }
 
 function loadPage_ManageDevices(){
-    window.location = "manage-devices.html";
+    window.location = "html/manage-devices.html";
 }
 
 function loadPage_AddNewUSER(){
-    window.location = "manage-users-add-new.html";
+    window.location = "html/manage-users-add-new.html";
 }
 
 function loadPage_AddNewDEVICE(){
-    window.location = "manage-devices-add-new.html";
+    window.location = "html/manage-devices-add-new.html";
 }
 
 function close_Notifications(){

@@ -31,15 +31,15 @@ if(document.getElementById("btn-user-account-update") != null){
 }
 
 function loadPage_ManageDevices(){
-    window.location = "manage-devices.html";
+    window.location = "html/manage-devices.html";
 }
 
 function loadPage_ManageUsers(){
-    window.location = "manage-users.html";
+    window.location = "html/manage-users.html";
 }
 
 function loadpage_Login(){
-    window.location = "login.html";
+    window.location = "html/login.html";
 }
 
 function validateInputFields(){

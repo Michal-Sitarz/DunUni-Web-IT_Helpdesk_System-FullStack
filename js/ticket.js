@@ -55,13 +55,13 @@ function submitTicket(){
         //for prototype version only
         if(currentFileName == "ticket-example.html")
         {
-            window.location = "home.html";
+            window.location = "html/home.html";
         }
         else if(currentFileName == "ticket-example-a.html"){
-            window.location = "home-a.html";
+            window.location = "html/home-a.html";
         }
         else{
-            window.location = "home.html";
+            window.location = "html/home.html";
         }
     }
 }
@@ -104,13 +104,13 @@ function cancelTicket(){
     //for prototype version only
     if(currentFileName == "ticket-example.html")
     {
-        window.location = "home.html";
+        window.location = "html/home.html";
     }
     else if(currentFileName == "ticket-example-a.html"){
-        window.location = "home-a.html";
+        window.location = "html/home-a.html";
     }
     else{
-        window.location = "home.html";
+        window.location = "html/home.html";
     }
 }
 

@@ -8,19 +8,19 @@ document.getElementById("btn-notifications-close").addEventListener("click",clos
 
 
 function loadPage_HelpdeskGuide(){
-    window.location = "helpdesk-guide.html";
+    window.location = "html/helpdesk-guide.html";
 }
 
 function loadPage_ReportIncident(){
-    window.location = "ticket-new-incident.html";
+    window.location = "html/ticket-new-incident.html";
 }
 
 function loadPage_NewRequest(){
-    window.location = "ticket-new-request.html";
+    window.location = "html/ticket-new-request.html";
 }
 
 function loadPage_TicketsHistory(){
-    window.location = "historical-tickets.html";
+    window.location = "html/historical-tickets.html";
 }
 
 function close_Notifications(){
