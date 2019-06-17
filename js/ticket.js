@@ -15,11 +15,11 @@ document.getElementById("btn-ticket-cancel").addEventListener("click",cancelTick
 
 //customize the ticket according to its nature (new request, new incident, open/edit existing)
 switch (currentFileName){
-    case 'ticket-new-request.html':
+    case 'ticket-new-request.php':
         selectDefaultTicketType("Request");
         selectDefaultTicketStatus();
         break;
-    case 'ticket-new-incident.html':
+    case 'ticket-new-incident.php':
         selectDefaultTicketType("Incident");
         selectDefaultTicketStatus();
         break;
@@ -53,15 +53,15 @@ function submitTicket(){
         clearAllUserInputFields();
 
         //for prototype version only
-        if(currentFileName == "ticket-example.html")
+        if(currentFileName == "ticket-example.php")
         {
-            window.location = "html/home.html";
+            window.location = "html/home.php";
         }
-        else if(currentFileName == "ticket-example-a.html"){
-            window.location = "html/home-a.html";
+        else if(currentFileName == "ticket-example-a.php"){
+            window.location = "html/home-a.php";
         }
         else{
-            window.location = "html/home.html";
+            window.location = "html/home.php";
         }
     }
 }
@@ -102,15 +102,15 @@ function clearAllUserInputFields(){
 
 function cancelTicket(){
     //for prototype version only
-    if(currentFileName == "ticket-example.html")
+    if(currentFileName == "ticket-example.php")
     {
-        window.location = "home.html";
+        window.location = "home.php";
     }
-    else if(currentFileName == "ticket-example-a.html"){
-        window.location = "home-a.html";
+    else if(currentFileName == "ticket-example-a.php"){
+        window.location = "home-a.php";
     }
     else{
-        window.location = "home.html";
+        window.location = "home.php";
     }
 }
 

@@ -103,13 +103,13 @@ function searchForUSER(){
     if(validateSearchInput(inputSearchBarUSER.value) === true){
         //perform search query
         alert("Entry not found");
-        //window.location = "manage-users.html";
+        //window.location = "manage-users.php";
     }
 }
 function searchForDEVICE(){
     if(validateSearchInput(inputSearchBarDEVICE.value) === true){
         //perform search query
         alert("Entry not found");
-        //window.location = "manage-devices.html";
+        //window.location = "manage-devices.php";
     }
 }

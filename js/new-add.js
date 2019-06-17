@@ -31,15 +31,15 @@ if(document.getElementById("btn-user-account-update") != null){
 }
 
 function loadPage_ManageDevices(){
-    window.location = "manage-devices.html";
+    window.location = "manage-devices.php";
 }
 
 function loadPage_ManageUsers(){
-    window.location = "manage-users.html";
+    window.location = "manage-users.php";
 }
 
 function loadpage_Login(){
-    window.location = "login.html";
+    window.location = "login.php";
 }
 
 function validateInputFields(){
@@ -84,7 +84,7 @@ function submitNewUser(){
         clearInputFields();
         if(addNewUser_CreateAccountItself != null){
             alert("You can now login using your new account's details.");
-            window.location = "login.html";
+            window.location = "login.php";
         }
     }
     else{

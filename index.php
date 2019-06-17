@@ -1,10 +1,9 @@
-<?php
-    include 'php/header.php';
-?>
-
+<html>
+    <head>
+    </head>
     <body>
         <script>
-            window.location = "html/login.html";
+            window.location = "php/login.php";
         </script>
     </body>
 </html>
