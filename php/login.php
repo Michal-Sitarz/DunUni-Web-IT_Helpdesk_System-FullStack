@@ -13,11 +13,11 @@ include 'common/header.php';
             </tr>
 
             <tr>
-                <td><input id="input-username" type="text"></td>
+                <td><input id="input-username" type="text" name="username"></td>
             </tr>
 
             <tr>
-                <td><input id="input-password" type="text"></td>
+                <td><input id="input-password" type="text" name="password"></td>
             </tr>
 
             <tr>

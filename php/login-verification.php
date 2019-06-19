@@ -1,14 +1,70 @@
 <?php
 
-session_start();
+if (session_status() < 2) {
+    session_start();
+} else {
+    session_unset();
+    session_destroy();
+}
 
 include '../../DB/connection.php';
 
-/* 
- * after checking username/password against DB
- *  load either Admin version or Standard version accordingly
-*/
+if (!empty($_POST)) {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+}
 
 
-include '../../DB/connection_close.php';
+// obtain user's information from DB (in a secure manner)
+$verifyUserQuery = $conn->prepare("SELECT * FROM Users WHERE username = ?");
+$verifyUserQuery->bind_param('s', $username);
+$verifyUserQuery->execute();
+
+$userInfo = $verifyUserQuery->get_result();
+
+
+
+// check if username was found in the DB
+if ($userInfo->num_rows > 0) {
+    $user = $userInfo->fetch_object();
+    $conn->close();
+} else {
+    $conn->close();
+    header('location: test-start.php');
+    exit;
+}
+
+echo "works<br>";
+echo $username;
+echo "<br>session (2 is active): " . session_status();
+/*
+
+//verify password and set session's user information
+if (password_verify($password, $user->password)) {
+    $_SESSION['username'] = $user->username;
+    if (empty($user->firstName) || empty($user->lastName)) {
+        $_SESSION['fullName'] = $user->username;
+    } else {
+        $_SESSION['fullName'] = $user->firstName . " " . $user->lastName;
+    }
+    // access granted > redirect to a Home page according to the user type
+    if ($user->adminUsertype) {
+
+        header('location: home-a.php'); //home-a
+        exit;
+
+        echo "user type: Admin";
+    } else {
+
+        header('location: home.php'); //home
+        exit;
+
+        echo "user type: Std";
+    }
+} else {
+    // access denied > redirect to the login page - how to redirect to fill username/password again in the original login.php page???
+    header('location: test-start.php');
+    exit;
+}
+
 ?>

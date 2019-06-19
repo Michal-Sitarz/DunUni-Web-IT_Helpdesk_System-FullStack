@@ -73,12 +73,14 @@ function validate_login_input() {
     username = inputUsername.value;
     password = inputPassword.value;
     
+    /*
     // login input fields validation
     if (username === "" ||
             password === "" ||
             username === "Username" ||
             password === "Password" ||
-            username.length < 5 ||
+            username.length < 2 ||
+            username.length > 50 ||
             !isNaN(username) ||
             !username.includes("@") ||
             !username.includes(".") ||
@@ -89,7 +91,8 @@ function validate_login_input() {
     } else {
         return true;
     }
-
+    */
+   return true;
 }
 
 function forgetPassword() {
