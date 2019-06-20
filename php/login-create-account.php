@@ -11,8 +11,9 @@ include 'common/header.php';
 
         <h3>Create account</h3>
         <hr>
-        <form action="login-create-account-verify.php" method="POST" onsubmit="return submitNewUser();">
-            <table>
+
+        <table>
+            <form action="login-create-account-verify.php" method="POST" onsubmit="return submitNewUser();">
                 <tr>
                     <td>First Name:</td>
                     <td><input id="add-new-user-first-name" class="input-add-new" type="text" name="firstName"></td>
@@ -37,12 +38,13 @@ include 'common/header.php';
                     <td></td>
                     <td><button id="btn-create-account-submit" class="btn">Submit</button></td>
                 </tr>
-                <tr>
-                    <td></td>
-                    <td><button id="btn-create-account-cancel" class="btn">Cancel</button></td>
-                </tr>
-            </table>
-        </form>
+            </form>
+            <tr>
+                <td></td>
+                <td><button id="btn-create-account-cancel" class="btn">Cancel</button></td>
+            </tr>
+        </table>
+
     </div>
 </div>
 

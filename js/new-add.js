@@ -75,19 +75,6 @@ function submitNewDevice(){
 function submitNewUser(){
     if(validateInputFields()){
         return true;
-        /*
-        alert("New User: "
-                +document.getElementById("add-new-user-first-name").value
-                +" "
-                +document.getElementById("add-new-user-last-name").value
-                +" has been added to the database.");
-        //assign values to User object and update a database
-        clearInputFields();
-        if(addNewUser_CreateAccountItself != null){
-            alert("You can now login using your new account's details.");
-            window.location = "login.php";
-        }
-        */
     }
     else{
         alert("Please fill in all the fields (all fields are mandatory!).");

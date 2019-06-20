@@ -15,7 +15,6 @@ if (session_status() < 2) {
 
 include '../../DB/connection.php';
 
-
 // obtain user's information from DB (in a secure manner)
 $verifyUserQuery = $conn->prepare("SELECT * FROM Users WHERE username = ?");
 $verifyUserQuery->bind_param('s', $username);
