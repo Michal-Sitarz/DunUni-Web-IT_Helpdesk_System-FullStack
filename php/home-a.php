@@ -1,11 +1,8 @@
 <?php
     include 'common/header.php';
-?>
-    
-<?php
     include 'common/header-nav.php';
 ?>
-            
+                
 <div id="main-wrapper">
     <nav>
         <button class="btn-mainpage" id="btn-helpdesk-guide">[?] Helpdesk Guide</button>    

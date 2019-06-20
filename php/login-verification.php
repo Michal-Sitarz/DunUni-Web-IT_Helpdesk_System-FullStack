@@ -1,18 +1,20 @@
 <?php
 
+if (!empty($_POST)) {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+}
+session_id($username);
 if (session_status() < 2) {
     session_start();
 } else {
     session_unset();
     session_destroy();
+    session_start();
 }
-
+echo session_id();
 include '../../DB/connection.php';
 
-if (!empty($_POST)) {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-}
 
 
 // obtain user's information from DB (in a secure manner)
@@ -21,8 +23,6 @@ $verifyUserQuery->bind_param('s', $username);
 $verifyUserQuery->execute();
 
 $userInfo = $verifyUserQuery->get_result();
-
-
 
 // check if username was found in the DB
 if ($userInfo->num_rows > 0) {
@@ -34,13 +34,9 @@ if ($userInfo->num_rows > 0) {
     exit;
 }
 
-echo "works<br>";
-echo $username;
-echo "<br>session (2 is active): " . session_status();
-/*
+//verify password and set session's user information -> use: password_verify() for "hashed" passwords
+if ($password === $user->password) {
 
-//verify password and set session's user information
-if (password_verify($password, $user->password)) {
     $_SESSION['username'] = $user->username;
     if (empty($user->firstName) || empty($user->lastName)) {
         $_SESSION['fullName'] = $user->username;
@@ -48,15 +44,16 @@ if (password_verify($password, $user->password)) {
         $_SESSION['fullName'] = $user->firstName . " " . $user->lastName;
     }
     // access granted > redirect to a Home page according to the user type
+    
     if ($user->adminUsertype) {
-
-        header('location: home-a.php'); //home-a
+        $_SESSION['admin'] = true;
+        header('location: home-a.php');
         exit;
 
         echo "user type: Admin";
     } else {
-
-        header('location: home.php'); //home
+        $_SESSION['admin'] = false;
+        header('location: home.php');
         exit;
 
         echo "user type: Std";
@@ -66,5 +63,4 @@ if (password_verify($password, $user->password)) {
     header('location: test-start.php');
     exit;
 }
-
 ?>
