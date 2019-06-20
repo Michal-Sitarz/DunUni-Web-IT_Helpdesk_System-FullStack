@@ -16,6 +16,10 @@ inputPassword.addEventListener("focus", enterInput_Password);
 inputUsername.addEventListener("focusout", checkInput_Username);
 inputPassword.addEventListener("focusout", checkInput_Password);
 
+if(window.location.hash=="#successful"){
+    alert("User account has been created successfully.\nYou can now use your credentials to login.");
+}
+
 function checkForEnterKey(e) {
     if (e.key === 'Enter') {
         checkInput_Username();

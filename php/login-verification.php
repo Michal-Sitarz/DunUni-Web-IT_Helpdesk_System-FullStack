@@ -12,9 +12,8 @@ if (session_status() < 2) {
     session_destroy();
     session_start();
 }
-echo session_id();
-include '../../DB/connection.php';
 
+include '../../DB/connection.php';
 
 
 // obtain user's information from DB (in a secure manner)
@@ -23,6 +22,7 @@ $verifyUserQuery->bind_param('s', $username);
 $verifyUserQuery->execute();
 
 $userInfo = $verifyUserQuery->get_result();
+$verifyUserQuery->close();
 
 // check if username was found in the DB
 if ($userInfo->num_rows > 0) {
@@ -44,19 +44,16 @@ if ($password === $user->password) {
         $_SESSION['fullName'] = $user->firstName . " " . $user->lastName;
     }
     // access granted > redirect to a Home page according to the user type
-    
+
     if ($user->adminUsertype) {
         $_SESSION['admin'] = true;
         header('location: home-a.php');
         exit;
-
-        echo "user type: Admin";
+        
     } else {
         $_SESSION['admin'] = false;
         header('location: home.php');
         exit;
-
-        echo "user type: Std";
     }
 } else {
     // access denied > redirect to the login page - how to redirect to fill username/password again in the original login.php page???

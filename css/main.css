@@ -192,6 +192,10 @@ h3 {
     color: orangered;
 }
 
+.faded-out{
+    color: grey;
+}
+
 .btn{
     color: white;
     background-color: #798093; /*grey*/

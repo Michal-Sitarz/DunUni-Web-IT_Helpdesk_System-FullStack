@@ -5,7 +5,6 @@ var allInputFields = document.getElementsByClassName("input-add-new");
 
 // EVENT listeners
 if(addNewUser_CreateAccountItself != null){
-    addNewUser_CreateAccountItself.addEventListener("click",submitNewUser);
     document.getElementById("btn-create-account-cancel").addEventListener("click",loadpage_Login);
 }
 
@@ -75,6 +74,8 @@ function submitNewDevice(){
 
 function submitNewUser(){
     if(validateInputFields()){
+        return true;
+        /*
         alert("New User: "
                 +document.getElementById("add-new-user-first-name").value
                 +" "
@@ -86,9 +87,11 @@ function submitNewUser(){
             alert("You can now login using your new account's details.");
             window.location = "login.php";
         }
+        */
     }
     else{
         alert("Please fill in all the fields (all fields are mandatory!).");
+        return false;
     }
 }
 
@@ -125,5 +128,5 @@ function deleteUserAccount(){
 }
 
 function resetUserPassword(){
-    alert("User's Password has been reset to default:\n\nPassword-01\n\nUser should change it during first sign in.");
+    alert("User's Password has been reset to default:\n\nPassword-01\n\nUser should change it during next sign in.");
 }
