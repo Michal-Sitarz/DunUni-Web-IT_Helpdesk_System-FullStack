@@ -30,7 +30,7 @@ if ($userInfo->num_rows > 0) {
     $conn->close();
 } else {
     $conn->close();
-    header('location: test-start.php');
+    header('location: login-failed.php');
     exit;
 }
 
@@ -60,7 +60,7 @@ if ($password === $user->password) {
     }
 } else {
     // access denied > redirect to the login page - how to redirect to fill username/password again in the original login.php page???
-    header('location: test-start.php');
+    header('location: login-failed.php');
     exit;
 }
 ?>
