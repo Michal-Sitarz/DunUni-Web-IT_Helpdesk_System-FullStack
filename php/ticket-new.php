@@ -66,11 +66,11 @@ include 'common/header-nav.php';
                                 <td>
                                     <select id="ticket-select-status" name="status">
                                         <option value="none-chosen">---</option>
-                                        <option value="New">New</option>
-                                        <option value="Open">Open</option>
-                                        <option value="Active">Active</option>
-                                        <option value="Closed">Closed</option>
-                                        <option value="Cancelled">Cancelled</option>
+                                        <option value="new">New</option>
+                                        <option value="open">Open</option>
+                                        <option value="active">Active</option>
+                                        <option value="closed">Closed</option>
+                                        <option value="cancelled">Cancelled</option>
                                     </select>
                                     <i id="ticket-select-category-help-icon" class="ticket-help-popup far fa-question-circle">
                                         <span id="ticket-select-category-help-popup" class="ticket-help-popup-text">
