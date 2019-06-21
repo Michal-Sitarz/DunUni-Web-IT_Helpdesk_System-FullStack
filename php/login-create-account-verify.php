@@ -34,7 +34,10 @@ if ($usernameExists->num_rows > 0) {
         $addNewUser->bind_param("ssisss", $username, $password, $adminUsertype, $firstName, $lastName, $department);
         $addNewUser->execute();
 
-        //redirect back to the 
+        $addNewUser->close();
+        $conn->close();
+
+        //redirect back to the login page
         header('location: login.php#successful');
         exit;
         

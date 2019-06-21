@@ -31,8 +31,7 @@ include 'common/header.php';
             $conn->close();
 
             //assign user info
-            //$userType = ($user->adminUsertype > 0 ? 'admin' : 'standard');
-            $userType = 'fafki';
+            $userType = ($user->adminUsertype > 0 ? 'admin' : 'standard');
             $password = $user->password;
             $firstName = $user->firstName;
             $lastName = $user->lastName;
