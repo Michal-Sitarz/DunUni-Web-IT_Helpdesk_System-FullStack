@@ -10,20 +10,23 @@ if (!empty($_POST)) {
     $category = $_POST['category'];
     $username = $_SESSION['username']; //mind this is obtained from SESSION, not POST !!!
     $status = $_POST['status'];
-
+    
+    //echo "user: ".$username."<br>topic: ".$topic."<br>desc: ".$description."<br>type: ".$ticketType."<br>categ: ".$category."<br>status: ".$status."<br>";
+    
     //upload new database entry
+    include '../../DB/connection.php';
     $query = $conn->prepare("INSERT INTO Tickets(raisedBy, status, ticketType, category, topic, description) VALUES ((SELECT username FROM Users WHERE username=?), ?, ?, ?, ?, ?)");
     $query->bind_param("ssssss", $username, $status, $ticketType, $category, $topic, $description);
     $query->execute();
 
     $query->close();
     $conn->close();
-
+    
     //redirect back to the home page
     if ($_SESSION["admin"]) {
         header('location: home-a.php');
     } else {
-        header('location: home-a.php');
+        header('location: home.php');
     }
     exit;
     
@@ -32,5 +35,6 @@ if (!empty($_POST)) {
     $conn->close();
     header('location: ticket-new.php#error');
     exit;
+        
 }
 ?>

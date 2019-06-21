@@ -5,7 +5,7 @@ include 'common/header-nav.php';
 
 <div id="main-wrapper">
     <nav>
-        <form action="ticket.php" method="GET">
+        <form action="ticket-new.php" method="GET">
             <button class="btn-mainpage" id="btn-helpdesk-guide">[?] Helpdesk Guide</button>    
             <button class="btn-mainpage" id="btn-report-incident" name="type" value="incident">[!] Report Incident</button>
             <button class="btn-mainpage" id="btn-new-request" name="type" value="request">[+] New Request</button>

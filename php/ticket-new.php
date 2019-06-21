@@ -14,9 +14,10 @@ include 'common/header-nav.php';
 
         <hr>
         <div id="ticket">
-            <form action="ticket-new-submit.php" method="POST">
+            
                 <div id="ticket-header">
                     <h3>New Ticket</h3>
+                    <form action="ticket-new-submit.php" method="POST" onsubmit="return submitTicket();">
                     <label>Topic: </label><input id="ticket-input-topic" type="text" name="topic">
                 </div>
                 <hr>
@@ -32,8 +33,8 @@ include 'common/header-nav.php';
                                 <td>
                                     <select id="ticket-select-type" name="ticketType">
                                         <option value="none-chosen">---</option>
-                                        <option value="Request">Request</option>
-                                        <option value="Incident">Incident</option>
+                                        <option value="request">Request</option>
+                                        <option value="incident">Incident</option>
                                     </select>
                                 </td>
                             </tr>
@@ -85,14 +86,15 @@ include 'common/header-nav.php';
                             <tr><td colspan="2"><hr></td>
                             </tr>
                         </table>
-                        <button id="btn-ticket-submit" class="btn">Submit</button>
+                        <button id="btn-ticket-submit" class="btn" type="submit">Submit</button>
+                        </form>
                         <button id="btn-ticket-cancel" class="btn">Cancel</button>
                     </div>
                 </div>
                 <hr>
                 <div id="ticket-notes">
                 </div>
-            </form>
+            
         </div>
 
     </div>
