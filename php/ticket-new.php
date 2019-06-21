@@ -7,29 +7,30 @@ if ($_SESSION["admin"]) {
     echo '<a href="home.php">';
 }
 include 'common/header-nav.php';
+
 ?>
 <div id="main-wrapper">
     <div id="content-wrapper">
 
         <hr>
         <div id="ticket">
-            <form action="ticket-submit-new.php" method="POST">
+            <form action="ticket-new-submit.php" method="POST">
                 <div id="ticket-header">
-                    <h3>Ticket No.: 009905</h3>
-                    <label>Topic: </label><input id="ticket-input-topic">
+                    <h3>New Ticket</h3>
+                    <label>Topic: </label><input id="ticket-input-topic" type="text" name="topic">
                 </div>
                 <hr>
                 <div id="ticket-body">
                     <div id="ticket-body-col-left">
                         <label>Description:</label>
-                        <textarea id="ticket-description-text"></textarea>
+                        <textarea id="ticket-description-text" name="description"></textarea>
                     </div>
                     <div id="ticket-body-col-right">
                         <table>
                             <tr>
                                 <td>Type:</td>
                                 <td>
-                                    <select id="ticket-select-type">
+                                    <select id="ticket-select-type" name="ticketType">
                                         <option value="none-chosen">---</option>
                                         <option value="Request">Request</option>
                                         <option value="Incident">Incident</option>
@@ -39,7 +40,7 @@ include 'common/header-nav.php';
                             <tr>
                                 <td>Category:</td>
                                 <td>
-                                    <select id="ticket-select-category">
+                                    <select id="ticket-select-category" name="category">
                                         <option value="none-chosen">---</option>
                                         <option value="Hardware">Hardware</option>
                                         <option value="Software">Software</option>
@@ -53,18 +54,18 @@ include 'common/header-nav.php';
                             </tr>
                             <tr>
                                 <td>Raised by:</td>
-                                <td id="ticket-username" class="td-data">Firstname Lastname</td>
+                                <td id="ticket-username" class="td-data"><?php echo $_SESSION['fullName']; ?></td>
                             </tr>
                             <tr>
                                 <td>Assigned to:</td>
-                                <td id="ticket-assigned-to" class="td-data">Ted Testovny</td>
+                                <td id="ticket-assigned-to" class="td-data">---</td>
                             </tr>
                             <tr>
                                 <td>Status:</td>
                                 <td>
-                                    <select id="ticket-select-status">
+                                    <select id="ticket-select-status" name="status">
                                         <option value="none-chosen">---</option>
-                                        <option value="Submitted">Submitted</option>
+                                        <option value="New">New</option>
                                         <option value="Open">Open</option>
                                         <option value="Active">Active</option>
                                         <option value="Closed">Closed</option>
@@ -72,7 +73,7 @@ include 'common/header-nav.php';
                                     </select>
                                     <i id="ticket-select-category-help-icon" class="ticket-help-popup far fa-question-circle">
                                         <span id="ticket-select-category-help-popup" class="ticket-help-popup-text">
-                                            <b>Submitted:</b> Not seen by IT team yet.<br>
+                                            <b>New:</b> Not seen by IT team yet.<br>
                                             <b>Open:</b> Assigned to member of IT team.<br>
                                             <b>Active:</b> In progress, some activity done.<br>
                                             <b>Closed:</b> Issue resolved, or request met.<br>
