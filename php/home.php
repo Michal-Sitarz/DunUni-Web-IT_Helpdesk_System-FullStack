@@ -1,14 +1,16 @@
 <?php
-    include 'common/header.php';
-    include 'common/header-nav.php';
+include 'common/header.php';
+include 'common/header-nav.php';
 ?>
 
 <div id="main-wrapper">
     <nav>
-        <button class="btn-mainpage" id="btn-helpdesk-guide">[?] Helpdesk Guide</button>    
-        <button class="btn-mainpage" id="btn-report-incident">[!] Report Incident</button>
-        <button class="btn-mainpage" id="btn-new-request">[+] New Request</button>
-        <button class="btn-mainpage" id="btn-tickets-history">[=] Tickets History</button>
+        <form action="ticket.php" method="GET">
+            <button class="btn-mainpage" id="btn-helpdesk-guide">[?] Helpdesk Guide</button>    
+            <button class="btn-mainpage" id="btn-report-incident" name="type" value="incident">[!] Report Incident</button>
+            <button class="btn-mainpage" id="btn-new-request" name="type" value="request">[+] New Request</button>
+            <button class="btn-mainpage" id="btn-tickets-history">[=] Tickets History</button>
+        </form>
     </nav>
     <hr>
 
@@ -21,7 +23,7 @@
                     <i id="notifications-close" class="fas fa-window-close"></i>
                 </button>
             </div>
-                <p>No new notifications</p>
+            <p>No new notifications</p>
             <hr>
         </div>
 
@@ -62,5 +64,5 @@
 <script src="../js/main.js"></script>
 
 <?php
-    include 'common/footer.php';
+include 'common/footer.php';
 ?>

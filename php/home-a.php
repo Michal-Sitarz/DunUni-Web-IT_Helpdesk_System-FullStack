@@ -1,16 +1,16 @@
 <?php
-    include 'common/header.php';
-    include 'common/header-nav.php';
+include 'common/header.php';
+include 'common/header-nav.php';
 ?>
-                
+
 <div id="main-wrapper">
     <nav>
-        <button class="btn-mainpage" id="btn-helpdesk-guide">[?] Helpdesk Guide</button>    
-        <!-- Button replaced by History Ticket. This will be implemented in further iteration.
-            <button class="btn-mainpage" id="btn-analytics">[$] Analytics</button>  -->
-        <button class="btn-mainpage" id="btn-tickets-history">[=] Tickets History</button>
-        <button class="btn-mainpage" id="btn-manage-users">[@] Manage Users</button>
-        <button class="btn-mainpage" id="btn-manage-devices">[#] Manage Devices</button>
+        <form>
+            <button class="btn-mainpage" id="btn-helpdesk-guide">[?] Helpdesk Guide</button>    
+            <button class="btn-mainpage" id="btn-tickets-history">[=] Tickets History</button>
+            <button class="btn-mainpage" id="btn-manage-users">[@] Manage Users</button>
+            <button class="btn-mainpage" id="btn-manage-devices">[#] Manage Devices</button>
+        </form>
     </nav>
     <hr>
 
@@ -86,5 +86,5 @@
 <script src="../js/main-a.js"></script>
 <script src="../js/search-bars.js"></script>
 <?php
-    include 'common/footer.php';
+include 'common/footer.php';
 ?>
