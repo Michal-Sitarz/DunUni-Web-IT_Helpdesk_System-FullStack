@@ -25,7 +25,7 @@ if(document.getElementById("btn-device-save") != null){
 if(document.getElementById("btn-user-account-update") != null){
     document.getElementById("btn-user-account-reset-password").addEventListener("click",resetUserPassword);
     document.getElementById("btn-user-account-update").addEventListener("click",updateUserAccount);
-    document.getElementById("btn-user-account-cancel").addEventListener("click",loadPage_ManageUsers);
+    document.getElementById("btn-user-account-cancel").addEventListener("click",loadPage_Home);
     document.getElementById("btn-user-account-delete").addEventListener("click",deleteUserAccount);
 }
 
@@ -39,6 +39,10 @@ function loadPage_ManageUsers(){
 
 function loadpage_Login(){
     window.location = "login.php";
+}
+
+function loadpage_Home(){
+    window.location = "home.php";
 }
 
 function validateInputFields(){
