@@ -17,7 +17,7 @@ document.getElementById("btn-ticket-cancel").addEventListener("click", cancelTic
 //customize the ticket according to its nature (new request, new incident, open/edit existing)
 switch (currentFileName) {
     case 'ticket-new.php':
-        selectDefaultTicketStatus();
+        //selectDefaultTicketStatus();
         break;
     case 'ticket-new.php?type=request':
         selectDefaultTicketType("request");
@@ -32,6 +32,7 @@ switch (currentFileName) {
         break;
 }
 
+
 function selectDefaultTicketType(ticketType) {
 
     selectType.value = ticketType;
@@ -39,8 +40,8 @@ function selectDefaultTicketType(ticketType) {
 }
 
 function selectDefaultTicketStatus() {
-
-    selectStatus.value = "New";
+    
+    selectStatus.value = 'new';
     selectStatus.disabled = true;
 }
 

@@ -5,12 +5,15 @@ include 'common/header-nav.php';
 
 <div id="main-wrapper">
     <nav>
-        <form action="ticket-new.php" method="GET">
-            <button class="btn-mainpage" id="btn-helpdesk-guide">[?] Helpdesk Guide</button>    
+
+        <button class="btn-mainpage" id="btn-helpdesk-guide">[?] Helpdesk Guide</button>    
+        <form action="ticket-new.php" method="GET"> 
             <button class="btn-mainpage" id="btn-report-incident" name="type" value="incident">[!] Report Incident</button>
             <button class="btn-mainpage" id="btn-new-request" name="type" value="request">[+] New Request</button>
-            <button class="btn-mainpage" id="btn-tickets-history">[=] Tickets History</button>
         </form>
+        <button class="btn-mainpage" id="btn-tickets-history">[=] Tickets History</button>
+
+
     </nav>
     <hr>
 
@@ -39,7 +42,7 @@ include 'common/header-nav.php';
                     </tr>
                 </thead>
                 <tbody>
-                    
+
                     <?php
                     //obtain all open tickets from the DB
                     include '../../DB/connection.php';
@@ -51,22 +54,22 @@ include 'common/header-nav.php';
                     $queryResults = $query->get_result();
                     $query->close();
 
-                    // check if username was found in the DB
-                    
-                    if ($queryResults->num_rows > 0) {
-                        //$allTickets = $queryResults->fetch_object();
-                        $allTickets = $queryResults->fetch_array(MYSQLI_ASSOC);
-                    }
-                    
-                    $conn->close();
-                    
-                    foreach($allTickets as $ticket){
-                        echo "<hr>".$ticket['id']." ".$ticket['topic']." status: ".$ticket['status'];
+                    while ($ticket = $queryResults->fetch_object()) {
+                        foreach ($ticket as $t) {
+                            echo $t . "<hr>";
+                        }
                     }
 
-                    //generate table with tickets
-                    //$row = '<td>'
-                    //display all tickets*/
+                    $conn->close();
+                    /*
+                      foreach($allTickets as $ticket){
+                      echo "<hr>".$ticket['id']." ".$ticket['topic']." status: ".$ticket['status'];
+                      }
+
+                      //generate table with tickets
+                      //$row = '<td>'
+                      //display all tickets
+                     */
                     ?>
                     <tr>
                         <td>DND0001111013</td>

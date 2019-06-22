@@ -12,11 +12,11 @@ function loadPage_HelpdeskGuide(){
 }
 
 function loadPage_ReportIncident(){
-    window.location = "ticket-new-incident.php";
+    //window.location = "ticket-new-incident.php";
 }
 
 function loadPage_NewRequest(){
-    window.location = "ticket-new-request.php";
+    //window.location = "ticket-new-request.php";
 }
 
 function loadPage_TicketsHistory(){

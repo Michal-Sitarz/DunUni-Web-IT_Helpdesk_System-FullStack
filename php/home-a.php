@@ -5,12 +5,12 @@ include 'common/header-nav.php';
 
 <div id="main-wrapper">
     <nav>
-        <form>
+        
             <button class="btn-mainpage" id="btn-helpdesk-guide">[?] Helpdesk Guide</button>    
             <button class="btn-mainpage" id="btn-tickets-history">[=] Tickets History</button>
             <button class="btn-mainpage" id="btn-manage-users">[@] Manage Users</button>
             <button class="btn-mainpage" id="btn-manage-devices">[#] Manage Devices</button>
-        </form>
+        
     </nav>
     <hr>
 

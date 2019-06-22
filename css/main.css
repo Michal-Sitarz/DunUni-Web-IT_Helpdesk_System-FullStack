@@ -84,10 +84,11 @@ footer {
     width: inherit;
 }
 
-nav form {
+nav, nav form{
     display: flex;
     justify-content: space-around;
 }
+
 
 /* GLOBAL elements */
 hr{
