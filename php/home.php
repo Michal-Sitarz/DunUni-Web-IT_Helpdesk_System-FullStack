@@ -35,7 +35,7 @@ include 'common/header-nav.php';
             <table>
                 <thead>
                     <tr>
-                        <th>Ticket number</th>
+                        <th>Ticket ID</th>
                         <th>Topic</th>
                         <th>Status</th>
                         <th>...</th>
@@ -47,42 +47,25 @@ include 'common/header-nav.php';
                     //obtain all open tickets from the DB
                     include '../../DB/connection.php';
                     // obtain user's information from DB (in a secure manner)
-                    $query = $conn->prepare("SELECT * FROM Tickets WHERE raisedBy = ?");
+                    $query = $conn->prepare("SELECT * FROM Tickets WHERE raisedBy = ? AND (status='new' OR status='open' OR status='active')");
                     $query->bind_param('s', $_SESSION['username']);
                     $query->execute();
 
                     $queryResults = $query->get_result();
                     $query->close();
+                    $conn->close();
 
+                    //display each row of a 
                     while ($ticket = $queryResults->fetch_object()) {
-                        foreach ($ticket as $t) {
-                            echo $t . "<hr>";
-                        }
+                        $row = "<tr><td>DUN" . str_pad((string)$ticket->ticketID, 9, "0", STR_PAD_LEFT) 
+                                . "</td><td>" . $ticket->topic 
+                                . "</td><td>" . $ticket->status 
+                                . "</td><td><form action='ticket.php' method='POST'><button name='id' value='".$ticket->ticketID."'>Details</button></form></td></tr>";
+                        echo $row;
                     }
 
-                    $conn->close();
-                    /*
-                      foreach($allTickets as $ticket){
-                      echo "<hr>".$ticket['id']." ".$ticket['topic']." status: ".$ticket['status'];
-                      }
-
-                      //generate table with tickets
-                      //$row = '<td>'
-                      //display all tickets
-                     */
                     ?>
-                    <tr>
-                        <td>DND0001111013</td>
-                        <td>Ticket Topic here</td>
-                        <td>normal</td>
-                        <td><a href="ticket.php">Details</a></td>
-                    </tr>
-                    <tr>
-                        <td>DND0001111013</td>
-                        <td>Ticket Topic here</td>
-                        <td>normal</td>
-                        <td><a href="ticket.php">Details</a></td>
-                    </tr>
+
                 </tbody>
             </table>
 

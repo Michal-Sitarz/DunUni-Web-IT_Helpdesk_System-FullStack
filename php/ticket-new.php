@@ -47,6 +47,7 @@ include 'common/header-nav.php';
                                         <option value="Software">Software</option>
                                         <option value="E-mail/Office Suite">E-mail/Office Suite</option>
                                         <option value="Network connection">Network connection</option>
+                                        <option value="Security">Security</option>
                                         <option value="Other">Other</option>
                                     </select> 
                                 </td>
@@ -88,7 +89,7 @@ include 'common/header-nav.php';
                         </table>
                         <button id="btn-ticket-submit" class="btn" type="submit">Submit</button>
                         </form>
-                        <button id="btn-ticket-cancel" class="btn">Cancel</button>
+                        <!--<button id="btn-ticket-cancel" class="btn">Cancel</button>-->
                     </div>
                 </div>
                 <hr>

@@ -71,7 +71,7 @@ include 'common/header.php';
                 </form>
                 <tr>
                     <td></td>
-                    <td><button id="btn-user-account-cancel" class="btn btn-add">Cancel</button></td>
+                    <!--<td><button id="btn-user-account-cancel" class="btn btn-add">Cancel</button></td>-->
                 </tr>
             </table>
 

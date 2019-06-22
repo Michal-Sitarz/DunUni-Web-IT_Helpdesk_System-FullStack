@@ -6,7 +6,7 @@
 }
 
 @media (min-width: 1441px) {
-    
+
     #main-wrapper, header{
         width:1000px; 
         margin: 0 auto;
@@ -41,38 +41,38 @@ header {
     top: 0; left: 0;
     z-index: -1;
 }
-    header h3 {
-        color: white;
-    }
+header h3 {
+    color: white;
+}
 
-    #header-title{
-        width: 50%;
-        padding-left: 1rem;
-    }
-    #header-nav{
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        
-        
-        width: 50%;
-        padding-right: 1rem;
+#header-title{
+    width: 50%;
+    padding-left: 1rem;
+}
+#header-nav{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 
-    }
 
-        #header-nav > *{
-            margin-left: .25rem;
-            margin-right: .25rem;
-        }
-        #header-nav a {
-            color: white;
-        }
-        
-        #header-nav i {
-            color: #00B0F0; /*deepskyblue*/
-        }
-    
-    
+    width: 50%;
+    padding-right: 1rem;
+
+}
+
+#header-nav > *{
+    margin-left: .25rem;
+    margin-right: .25rem;
+}
+#header-nav a {
+    color: white;
+}
+
+#header-nav i {
+    color: #00B0F0; /*deepskyblue*/
+}
+
+
 footer {
     text-align: center;
     font-size: 80%;
@@ -97,11 +97,11 @@ hr{
     border-style: solid;
     border-color: lightblue;
 }
-    #content-wrapper hr{
-        margin-left: 0;
-        margin-right: 0;
-    }
-    
+#content-wrapper hr{
+    margin-left: 0;
+    margin-right: 0;
+}
+
 button, #btn-login{
     font-family: Tahoma;
     font-size: 100%;
@@ -133,9 +133,9 @@ table{
 h3 {
     color: #2F5496; /*navy*/
 }
-    #ticket h3{
-        color: navy;
-    }
+#ticket h3{
+    color: navy;
+}
 
 
 /* WRAPPERS & CONTAINERS */
@@ -158,20 +158,20 @@ h3 {
     border: 1px solid #2F5496; /*lightblue*/;
     padding: 10px;
 }
-    #login-container hr{
-        margin-left: 3rem;
-        margin-right: 3rem;
-    }
+#login-container hr{
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
 
 #notifications-header{
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
 }
-    #notifications-header h3{
-        margin-top: 0;
-        margin-bottom: 0;
-    }
+#notifications-header h3{
+    margin-top: 0;
+    margin-bottom: 0;
+}
 
 
 
@@ -276,10 +276,10 @@ h3 {
     height: auto;
     margin: 0;
 }
-    #btn-notifications-close i{
-        color: #C05046; /*firebrick*/
-    }
-    
+#btn-notifications-close i{
+    color: #C05046; /*firebrick*/
+}
+
 #btn-user-account-update{
     background-color: #31B8F2; /*cornflowerblue*/
 }
@@ -304,7 +304,7 @@ h3 {
     background-color: #C05046; /*firebrick*/
 }
 
-    
+
 /* tickets list table */
 
 #tbl-tickets-list table{
@@ -321,5 +321,14 @@ h3 {
 #tbl-tickets-list th {
     background-color: #2F5496; /*navy*/
     color: white;
+}
+#tbl-tickets-list form{
+    display: flex;
+    justify-content: space-around;
+}
+
+#tbl-tickets-list button {
+    color: #2F5496; /*navy*/ 
+    margin: 0;
 }
 

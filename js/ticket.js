@@ -7,17 +7,20 @@ var allSelectFields = document.getElementsByTagName("select");
 var selectType = document.getElementById("ticket-select-type");
 var selectStatus = document.getElementById("ticket-select-status");
 
+
 // event listeners
 helpTicketStatus.addEventListener("mouseover", toggleHelpDisplay);
 helpTicketStatus.addEventListener("mouseout", toggleHelpDisplay);
 
-document.getElementById("btn-ticket-cancel").addEventListener("click", cancelTicket);
-
+if (document.getElementById("btn-ticket-cancel") != null)
+{
+    document.getElementById("btn-ticket-cancel").addEventListener("click", cancelTicket);
+}
 
 //customize the ticket according to its nature (new request, new incident, open/edit existing)
 switch (currentFileName) {
     case 'ticket-new.php':
-        //selectDefaultTicketStatus();
+        selectDefaultTicketStatus();
         break;
     case 'ticket-new.php?type=request':
         selectDefaultTicketType("request");
@@ -40,7 +43,7 @@ function selectDefaultTicketType(ticketType) {
 }
 
 function selectDefaultTicketStatus() {
-    
+
     selectStatus.value = 'new';
     selectStatus.disabled = true;
 }
