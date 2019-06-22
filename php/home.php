@@ -39,6 +39,7 @@ include 'common/header-nav.php';
                     </tr>
                 </thead>
                 <tbody>
+                    
                     <?php
                     //obtain all open tickets from the DB
                     include '../../DB/connection.php';
